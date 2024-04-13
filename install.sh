@@ -101,6 +101,7 @@ sudo mv dev.zip /usr/local/src
 cd /usr/local/src
 sudo unzip dev.zip
 cd charm-dev
+sudo ./configure
 sudo make
 sudo make install
 
