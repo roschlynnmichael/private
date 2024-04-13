@@ -4,7 +4,7 @@ echo "Beginning automated install of Charm Crypto Library."
 echo "May take some time to install. Grab a cup of coffee while you wait!"
 sleep 3
 
-#Run this script using sudo
+#Run this script using sudo ./install.sh
 #Made for Ubuntu-22.04 LTS on Windows Subsystem for Linux (WSL2)
 #Make package folder
 mkdir Packages
@@ -97,7 +97,7 @@ sudo apt install git unzip -y
 cd
 cd Packages
 wget https://github.com/JHUISI/charm/archive/refs/heads/dev.zip
-sudo mv ./dev.zip /usr/local/src
+sudo mv dev.zip /usr/local/src
 cd /usr/local/src
 sudo unzip dev.zip
 cd charm-dev
@@ -114,6 +114,9 @@ echo "import charm"
 sleep 3
 echo "print(charm)"
 sleep 3
+echo "Test Openssl version now!"
+
+openssl version
 
 echo "If you see no errors, then the installation was successful"
 echo "Exiting Bash Script!"
